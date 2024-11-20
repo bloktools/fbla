@@ -1,0 +1,19 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloktools/fbla.git"
+  },
+  "author": "Riley Clos, Veer Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bloktools/fbla/issues"
+  },
+  "homepage": "https://github.com/bloktools/fbla#readme"
+}
