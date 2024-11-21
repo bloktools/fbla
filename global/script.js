@@ -7,7 +7,9 @@
 //                                                                  //
 //////////////////////////////////////////////////////////////////////
 
-
+const images = [
+    ['corner_view', '/global/assets/arena_renders/corner_view.PNG'],
+]
 
 //////////////////////////////////////////////////////////////////////
 //                                                                  //
@@ -30,7 +32,16 @@ function injectNav() { // function to add the navbar to a page. puts all navbar 
 }
 
 function generatePlaceholder(elem) { // function to set src of image to placeholder if needed 
-    elem.attr('src', `https://placehold.co/${elem.width()}x${elem.height()}`);
+    elem.attr('src', `https://placehold.co/${Math.floor(elem.width())}x${Math.floor(elem.height())}`);
+}
+function insertImage(elem) {
+    const index = images.findIndex(image => image[0] === $(elem).data('background-image'));
+    let path = null;
+    if (index !== -1) {
+        path = images[index][1]
+    }
+    elem.css('background-image', `url(${path})`);
+    console.log((()=>{if(path===null){return `Failed to insert image!\n\nDebug: index=${index}\n$(elem).data('background-image'): ${$(elem).data('background-image')}`}else{return `Inserted ${path}.`}})())
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -44,9 +55,14 @@ function generatePlaceholder(elem) { // function to set src of image to placehol
 
 $(function () {
     injectNav();
-    for (i=0;i<$('img[src=""]').length;i++) {
-        generatePlaceholder($(`img[src=""]:nth-child(${i+1})`));
-    }
+    $('head').prepend(`<link rel="stylesheet" href="/global/normalize.css">`)
+    $('img[src=""]').each(function () {
+        generatePlaceholder($(this));
+    })
+
+    $('[data-background-image]').each(function () {
+        insertImage($(this));
+    })
 
 
     $('body').css('opacity', 1);

@@ -327,3 +327,7 @@ p {
     margin: 0;
     font-size: 2em;
 }
+.image-fill {
+    background-size: cover;
+    background-position: center center;
+}
