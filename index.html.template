@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluehaven Community Center Arena</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/global/style.css">
+    <link rel="stylesheet" href="/global/fonts.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="/events/">
+                <li>EVENTS</li>
+            </a>
+            <a href="/info/">
+                <li>INFO</li>
+            </a>
+            <a href="/contact/">
+                <li>CONTACT US</li>
+            </a>
+        </ul>
+    </nav>
+    
+    <script src="/global/jquery.min.js"></script>
+    <script src="/global/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

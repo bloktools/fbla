@@ -1,0 +1,12 @@
+@font-face {
+    font-family: host_grotesk;
+    src: url(fonts/host_grotesk/HostGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: josefin_sans;
+    src: url(fonts/josefin_sans/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: teko;
+    src: url(fonts/teko/Teko-VariableFont_wght.ttf);
+}

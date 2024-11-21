@@ -1,0 +1,328 @@
+/* Fonts are in file format capitalization: host_grotesk, josefin_sans, teko */
+
+:root { /* VARIABLE DECLARATIONS */
+/*
+            LIGHT MODE COLORS
+*/
+    --light-primary: #0b6780;
+    --light-surface-tint: #0b6780;
+    --light-on-primary: #ffffff;
+    --light-primary-container: #b9eaff;
+    --light-on-primary-container: #001f29;
+    --light-secondary: #7e570f;
+    --light-on-secondary: #ffffff;
+    --light-secondary-container: #ffddb1;
+    --light-on-secondary-container: #291800;
+    --light-teritary: #5b5b7e;
+    --light-on-teritary: #ffffff;
+    --light-teritary-container: #e1dfff;
+    --light-on-teritary-container: #181837;
+    --light-error: #ba1a1a;
+    --light-on-error: #ffffff;
+    --light-error-container: #ffdad6;
+    --light-on-error-container: #410002;
+    --light-background: #f5fafd;
+    --light-on-background: #171c1f;
+    --light-surface: #f5fafd;
+    --light-on-surface: #171c1f;
+    --light-surface-variant: #dce4e8;
+    --light-on-surface-variant: #40484c;
+    --light-outline: #70787c;
+    --light-outline-variant: #c0c8cc;
+    --light-shadow: #000000;
+    --light-scrim: #000000;
+    --light-inverse-surface: #2c3134;
+    --light-inverse-on-surface: #edf1f4;
+    --light-inverse-primary: #89d0ed;
+    --light-primary-fixed: #b9eaff;
+    --light-on-primary-fixed: #001f29;
+    --light-primary-fixed-dim: #89d0ed;
+    --light-secondary-fixed: #ffddb1;
+    --light-on-secondary-fixed: #291800;
+    --light-secondary-fixed-dim: #f3bd6e;
+    --light-teritary-fixed: #e1dfff;
+    --light-on-teritary-fixed: #181837;
+    --light-teritary-fixed-dim: #c4c3eb;
+    --light-on-teritary-fixed-variant: #434465 ;
+    --light-surface-dim: #d6dbde;
+    --light-surface-bright: #f5fafd;
+    --light-surface-container-lowest: #ffffff;
+    --light-surface-container: #eaeef2;
+    --light-surface-container-high: #e4e9ec;
+    --light-surface-container-highest: #dee3e6;
+/*
+            DARK MODE COLORS
+*/
+    --dark-primary: #89d0ed;
+    --dark-surface-tint: #89d0ed;
+    --dark-on-primary: #003544;
+    --dark-primary-container: #004d62;
+    --dark-on-primary-container: #b9eaff;
+    --dark-secondary: #f3bd6e;
+    --dark-on-secondary: #442b00;
+    --dark-secondary-container: #624000;
+    --dark-on-secondary-container: #ffddb1;
+    --dark-teritary: #c4c3eb;
+    --dark-on-teritary: #2d2d4d;
+    --dark-teritary-container: #434465;
+    --dark-on-teritary-container: #e1dfff;
+    --dark-error: #ffb4ab;
+    --dark-on-error: #690005;
+    --dark-error-container: #93000a;
+    --dark-on-error-container: #ffdad6;
+    --dark-background: #0f1416;
+    --dark-on-background: #dee3e6;
+    --dark-surface: #0f1416;
+    --dark-on-surface: #dee3e6;
+    --dark-surface-variant: #40484c;
+    --dark-on-surface-variant: #c0c8cc;
+    --dark-outline: #8a9296;
+    --dark-outline-variant: #40484c;
+    --dark-shadow: #000000;
+    --dark-scrim: #000000;
+    --dark-inverse-surface: #dee3e6;
+    --dark-inverse-on-surface: #2c3134;
+    --dark-inverse-primary: #0b6780;
+    --dark-primary-fixed: #b9eaff;
+    --dark-on-primary-fixed: #001f29;
+    --dark-primary-fixed-dim: #89d0ed;
+    --dark-secondary-fixed: #ffddb1;
+    --dark-on-secondary-fixed: #291800;
+    --dark-secondary-fixed-dim: #f3bd6e;
+    --dark-teritary-fixed: #e1dfff;
+    --dark-on-teritary-fixed: #181837;
+    --dark-teritary-fixed-dim: #c4c3eb;
+    --dark-on-teritary-fixed-variant: #434465 ;
+    --dark-surface-dim: #0f1416;
+    --dark-surface-bright: #353a3d;
+    --dark-surface-container-lowest: #0a0f11;
+    --dark-surface-container: #1b2023;
+    --dark-surface-container-high: #252b2d;
+    --dark-surface-container-highest: #303638;
+/* 
+            LIGHT HIGH CONTRAST COLORS    
+*/
+    --light-high-contrast-primary: #002631;
+    --light-high-contrast-surface-tint: #0b6780;
+    --light-high-contrast-on-primary: #ffffff;
+    --light-high-contrast-primary-container: #00495c;
+    --light-high-contrast-on-primary-container: #ffffff;
+    --light-high-contrast-secondary: #311e00;
+    --light-high-contrast-on-secondary: #ffffff;
+    --light-high-contrast-secondary-container: #5c3c00;
+    --light-high-contrast-on-secondary-container: #ffffff;
+    --light-high-contrast-teritary: #1e1f3e;
+    --light-high-contrast-on-teritary: #ffffff;
+    --light-high-contrast-teritary-container: #3f4060;
+    --light-high-contrast-on-teritary-container: #ffffff;
+    --light-high-contrast-error: #4e0002;
+    --light-high-contrast-on-error: #ffffff;
+    --light-high-contrast-error-container: #8c0009;
+    --light-high-contrast-on-error-container: #ffffff;
+    --light-high-contrast-background: #f5fafd;
+    --light-high-contrast-on-background: #171c1f;
+    --light-high-contrast-surface: #f5fafd;
+    --light-high-contrast-on-surface: #000000;
+    --light-high-contrast-surface-variant: #dce4e8;
+    --light-high-contrast-on-surface-variant: #1d2529;
+    --light-high-contrast-outline: #3c4448;
+    --light-high-contrast-outline-variant: #3c4448;
+    --light-high-contrast-shadow: #000000;
+    --light-high-contrast-scrim: #000000;
+    --light-high-contrast-inverse-surface: #2c3134;
+    --light-high-contrast-inverse-on-surface: #ffffff;
+    --light-high-contrast-inverse-primary: #d2f1ff;
+    --light-high-contrast-primary-fixed: #00495c;
+    --light-high-contrast-on-primary-fixed: #ffffff;
+    --light-high-contrast-primary-fixed-dim: #00313f;
+    --light-high-contrast-secondary-fixed: #5c3c00;
+    --light-high-contrast-on-secondary-fixed: #ffffff;
+    --light-high-contrast-secondary-fixed-dim: #3f2800;
+    --light-high-contrast-on-secondary-fixed: #ffffff;
+    --light-high-contrast-teritary-fixed: #3f4060;
+    --light-high-contrast-on-teritary-fixed: #ffffff;
+    --light-high-contrast-teritary-fixed-dim: #292a49;
+    --light-high-contrast-on-teritary-fixed-variant: #ffffff;
+    --light-high-contrast-surface-dim: #d6dbde;
+    --light-high-contrast-surface-bright: #f5fafd;
+    --light-high-contrast-surface-container-lowest: #ffffff;
+    --light-high-contrast-surface-container: #eaeef2;
+    --light-high-contrast-surface-container-high: #e4e9ec;
+    --light-high-contrast-surface-container-highest: #dee3e6;
+/*
+            DARK HIGH CONTRAST COLORS
+*/
+    --dark-high-contrast-primary: ##f6fbff;
+    --dark-high-contrast-surface-tint: #89d0ed;
+    --dark-high-contrast-on-primary: #000000;
+    --dark-high-contrast-primary-container: #8dd5f1;
+    --dark-high-contrast-on-primary-container: #000000;
+    --dark-high-contrast-secondary: #fffaf7;
+    --dark-high-contrast-on-secondary: #000000;
+    --dark-high-contrast-secondary-container: #f7c272;
+    --dark-high-contrast-on-secondary-container: #000000;
+    --dark-high-contrast-teritary: #fdf9ff;
+    --dark-high-contrast-on-teritary: #000000;
+    --dark-high-contrast-teritary-container: #c8c7ef;
+    --dark-high-contrast-on-teritary-container: #000000;
+    --dark-high-contrast-error: #fff9f9;
+    --dark-high-contrast-on-error: #000000;
+    --dark-high-contrast-error-container: #ffbab1;
+    --dark-high-contrast-on-error-container: #000000;
+    --dark-high-contrast-background: #0f1416;
+    --dark-high-contrast-on-background: #dee3e6;
+    --dark-high-contrast-surface: #0f1416;
+    --dark-high-contrast-on-surface: #ffffff;
+    --dark-high-contrast-surface-variant: #40484c;
+    --dark-high-contrast-on-surface-variant: #f6fbff;
+    --dark-high-contrast-outline: #c4ccd0;
+    --dark-high-contrast-outline-variant: #c4ccd0;
+    --dark-high-contrast-shadow: #000000;
+    --dark-high-contrast-scrim: #000000;
+    --dark-high-contrast-inverse-surface: #dee3e6;
+    --dark-high-contrast-inverse-on-surface: #000000;
+    --dark-high-contrast-inverse-primary: #002e3c;
+    --dark-high-contrast-primary-fixed: #c5edff;
+    --dark-high-contrast-on-primary-fixed: #000000;
+    --dark-high-contrast-primary-fixed-dim: #8dd5f1;
+    --dark-high-contrast-secondary-fixed: #ffe3be;
+    --dark-high-contrast-on-secondary-fixed: #000000;
+    --dark-high-contrast-secondary-fixed-dim: #f7c272;
+    --dark-high-contrast-teritary-fixed: #e6e4ff;
+    --dark-high-contrast-on-teritary-fixed: #000000;
+    --dark-high-contrast-teritary-fixed-dim: #c8c7ef;
+    --dark-high-contrast-on-teritary-fixed-variant: #121331;
+    --dark-high-contrast-surface-dim: #0f1416;
+    --dark-high-contrast-surface-bright: #353a3d;
+    --dark-high-contrast-surface-container-lowest: #0a0f11;
+    --dark-high-contrast-surface-container: #1b2023;
+    --dark-high-contrast-surface-container-high: #252b2d;
+    --dark-high-contrast-surface-container-highest: #303638;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: host_grotesk, Arial, Helvetica, sans-serif;
+}
+/* transition 200ms elements */
+button {
+    transition: 200ms;
+}
+/* box sizing border box elements */
+.surface-lowest, .fullscreen {
+    box-sizing: border-box;
+}
+
+
+/* navbar styling */
+
+nav {
+    width: 100vw;
+    height: 60px;
+    display: grid;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    justify-content: left;
+    background: var(--light-on-background);
+    padding: 0 50px;
+    z-index: 1000;
+}
+nav * {
+    list-style-type: none;
+    float: left;
+    font-family: josefin_sans;
+}
+nav ul {
+    padding: 0;
+}
+nav ul a, nav ul li {
+    color: var(--light-on-primary);
+    margin: 0 20px;
+    position: relative;
+}
+nav ul a:after { /* pseudo classes to make underline on link hover in navbar */
+    content: '';
+    position: absolute;
+    background: var(--light-on-primary);
+    width: calc(100% - 40px);
+    height: 2px;
+    left: 20px;
+    bottom: -3px;
+    opacity: 0;
+    transition: 200ms;
+}
+nav ul a:hover:after {
+    opacity: 1;
+    bottom: -1px;
+}
+
+button {
+    background: var(--light-primary);
+    border: 1px solid var(--light-outline);
+    color: var(--light-on-primary);
+    padding: 6px 14px;
+    border-radius: 100em;
+    font-size: 1em;
+}
+button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+button:active {
+    transition: 0ms;
+    filter: brightness(1.3);
+}
+button.large-button {
+    padding: 10px 23px;
+    font-size: 1.3em
+}
+.fullscreen {
+    width: 100vw;
+    height: 100svh;
+}
+.surface-lowest {
+    background: var(--light-surface-container-lowest);
+    color: var(--light-on-surface);
+    padding: 2em
+}
+.surface {
+    background: var(--light-surface-container);
+    color: var(--light-on-surface);
+    padding: 2em
+}
+.surface-high {
+    background: var(--light-surface-container-high);
+    color: var(--light-on-surface);
+    padding: 2em
+}
+.surface-highest {
+    background: var(--light-surface-container-highest);
+    color: var(--light-on-surface);
+    padding: 2em
+}
+img.regular {
+    width: 40vw;
+    aspect-ratio: 4/3;
+}
+img.in-panel[align="left"] {
+    margin: 0 2em 2em 0;
+}
+img.in-panel[align="right"] {
+    margin: 2em 0 2em 0;
+}
+h1 {
+    font-family: teko;
+    font-size: 5em;
+    margin: 0;
+}
+p {
+    margin: 0;
+    font-size: 2em;
+}
