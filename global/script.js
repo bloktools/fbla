@@ -26,6 +26,9 @@ const eventList = [ // title, description, price, start DD MMM. YYYY, end DD MMM
     // set end to -1 to signify single day event
     // set time to -1 to signify all day / or if its multiple days
     // set img to -1 to signify placeholder
+
+//riley: make like 10 events
+
     ["Event 1", "This is the description for event 1.", 10, "24 Nov. 2024", -1, "6:30 PM", -1],
     ["Event 2", "This is the description for event 2.", 15.99, "25 Nov. 2024", -1, -1, -1],
     ["Event 3", "This is the description for event 3.", 120, "27 Nov. 2024", "1 Dec. 2024", -1, -1],
