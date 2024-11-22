@@ -376,6 +376,7 @@ p {
     grid-template-rows: repeat(200px);
     display: none;
     overflow-y: scroll;
+    z-index: 900;
 }
 
 .search-results.active {
