@@ -1,0 +1,8 @@
+body {
+    background: var(--light-background);
+}
+
+.contact-container {
+    width: 100vw;
+    color: var(--light-on-background);
+}
