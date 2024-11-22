@@ -1,16 +1,7 @@
 
 
 
-const items = [
-    [`Where is the arena located?`, `The Bluehaven Community Center Arena is located in St. Petersburg, Florida. You can see directions <a href="/info/directions">here</a>.`],
-    [`When was the arena built?`, `The Bluehaven Community Center Arena was built in November 2024.`],
-    [`Question 3`, `Answer 3`],
-    [`Question 4`, `Answer 4`],
-    [`Question 5`, `Answer 5`],
-    [`Question 6`, `Answer 6`],
-    [`Question 7`, `Answer 7`],
-    [`Question 8`, `Answer 8`],
-];
+const items = questions
 
 function addItem(q, a) {
     $('body').append(`
