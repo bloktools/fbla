@@ -161,6 +161,10 @@ function insertImage(elem) {
     console.log((()=>{if(path===null){return `Failed to insert image!\n\nDebug: index=${index}\n$(elem).data('background-image'): ${$(elem).data('background-image')}`}else{return `Inserted ${path}.`}})())
 }
 
+function queryScoreMultiplier(idx) {
+    return ((2*idx^4+idx^3+24)/(6*idx^4+3*idx^3));
+}
+
 function querySearch(q) {
     console.log('Searching for: '+q);
     var possibleQueries = structuredClone(siteHiearchy);
@@ -175,7 +179,7 @@ function querySearch(q) {
         
         let totalScore = 0;
         combinedTerms.forEach(function (t) {
-            totalScore += checkSimilarCharacters(t, q)/((combinedTerms.indexOf(t)+1)*(2^((-1 * combinedTerms.indexOf(t))+1))); // score
+            totalScore += checkSimilarCharacters(t, q)*queryScoreMultiplier(e.indexOf(t)); // score
         })
 
         termsScored.push({
@@ -233,7 +237,7 @@ $(function () {
         $('.search-results').html('');
 
         order.forEach(function (e) {
-            if (e.score > $('.nav-search').val().length/order[0].score){
+            if (e.score > ($('.nav-search').val().length^2/order[0].score)+$('.nav-search').val().length && order.indexOf(e)<5){
                 const matchingItem = searches.find(item => item.name === e.name);
                 console.log(matchingItem);
             
