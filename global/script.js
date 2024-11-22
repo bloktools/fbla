@@ -15,7 +15,7 @@ const images = [
 const questions = [
     [`Where is the arena located?`, `The Bluehaven Community Center Arena is located in St. Petersburg, Florida. You can see directions <a href="/info/directions">here</a>.`],
     [`When was the arena built?`, `The Bluehaven Community Center Arena was built in November 2024.`],
-    [`Question 3`, `Answer 3`],
+    [`Who?`, `Me`],
     [`Question 4`, `Answer 4`],
     [`Question 5`, `Answer 5`],
     [`Question 6`, `Answer 6`],
