@@ -32,7 +32,7 @@ const eventList = [
 
 // ['name of page', 'link', ['commonly', 'associated', 'keywords'], extra (-1 if none)]
 const siteHiearchy = [
-    ['home', '/', ['start', 'homepage', 'main', 'bluehaven'], -1],
+    ['home', '/', ['homepage', 'start', 'main', 'bluehaven'], -1],
     ['about', `/#about`, ['about'] , -1],
     ['events', '/events', ['tickets', 'buy', 'calendar', 'seats', 'perform', 'play', 'playing'],
         1, eventList
