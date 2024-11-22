@@ -18,7 +18,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    background: var(--light-primary);
+    background: var(--light-surface-container);
     margin: 20px;
     transition: 200ms;
     position: relative;
@@ -27,7 +27,7 @@
     text-align: center;
 }
 .panels-container * {
-    color: var(--light-on-primary);
+    color: var(--light-primary);
     text-decoration: none;
 }
 .panels-container h3 {

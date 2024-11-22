@@ -9,6 +9,7 @@
 
 const images = [
     ['corner_view', '/global/assets/arena_renders/corner_view.PNG'],
+    ['head_on', '/global/assets/arena_renders/head_on.PNG'],
 ]
 
 const questions = [
@@ -21,7 +22,6 @@ const questions = [
     [`Question 7`, `Answer 7`],
     [`Question 8`, `Answer 8`],
 ];
-
 const eventList = [
     ["Event 1", "This is the description for event 1.", 10, "24 Nov. 2024", -1, "6:30 PM", -1],
     ["Event 2", "This is the description for event 2.", 15.99, "25 Nov. 2024", -1, -1, -1],
