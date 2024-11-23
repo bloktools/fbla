@@ -9,17 +9,36 @@
     <link rel="stylesheet" href="/global/fonts.css">
 </head>
 <body>
-    
-    <div style="height: 90px"></div>
-
-
     <div class="contact-container">
-
-        <h1>Contact Us</h1>
-        <br><br>
-        <p></p>
-
+      <div class="contact-details">
+        <h1>CONTACT US</h1>
+        <div class="contact-info">
+          <p><strong>Address:</strong><br>BlueHaven High School Arena<br>456 Championship Drive<br>BlueHaven, BH 12345</p>
+          <p><strong>Phone Number:</strong><br>(555) 123-4567</p>
+          <p><strong>Email:</strong><br><a href="mailto:info@bluehavenarena.com">info@bluehavenarena.com</a></p>
+          <p><strong>Hours of Operation:</strong><br>Monday–Friday: 8:00 AM – 6:00 PM<br>Event Days: Open 2 hours before <span class="highlight">event start</span></p>
+        </div>
+        <div class="description">
+          <p>At BlueHaven High School Arena, we’re always excited to connect with our community, visitors, and event organizers.</p>
+          <p>If you have a question or comment, please use the form to the right, or the contact details listed above.</p>
+          <p>Since opening our doors, the BlueHaven High School Arena has been a hub for athletic excellence, school spirit, and unforgettable events. We’ve hosted everything from thrilling championship games to community celebrations, earning a reputation as a premier venue for sports and entertainment in the region.</p>
+          <p>We look forward to hearing from you and helping to make your experience at BlueHaven High School Arena exceptional. Whether you’re planning an event, attending a game, or just curious about what we offer, we’re here to assist.</p>
+        </div>
+      </div>
+  
+      <div class="contact-form">
+        <h2>* Required Field</h2>
+        <form action="submit_form.js" method="POST">
+          <input type="text" name="name" placeholder="*Name" required>
+          <input type="email" name="email" placeholder="*Email" required>
+          <input type="tel" name="phone" placeholder="*Phone Number" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" placeholder="Type your message here …" rows="5"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
+  </body>
 
     <script src="/global/jquery.min.js"></script>
     <script src="/global/script.js"></script>
