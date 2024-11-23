@@ -45,7 +45,15 @@ $(()=>{
 
     $("body").prepend('<img class=model-image>')
 
+    $(".event-blown-up-container").hide();
+
+
     eventList.forEach(function (e) {
         addEvent(e[0],e[1],e[2],e[3],e[4],e[5],e[6],eventList.indexOf(e));
     });
+
+    $('.eventButton').on('click', ()=>{
+        $('.event-blown-up-container').show();
+    })
+    $('#back-button-event-blown-up').click(()=>{$('.event-blown-up-container').hide()})
 })

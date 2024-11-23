@@ -221,7 +221,7 @@ button, .nav-search {
     box-sizing: border-box;
 }
 /* shadowed elements */
-button:focus, input:focus {
+input:focus {
     box-shadow: -.2em .2em .2em -.2em var(--light-shadow);
 }
 

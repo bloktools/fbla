@@ -1,3 +1,8 @@
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: var(--light-background);
 }
@@ -33,7 +38,7 @@ body {
     grid-template-rows: 1fr 50px;
     grid-template-columns: 1fr 150px;
     gap: 10px;
-    color: var(--light-on-surface   );
+    color: var(--light-on-surface);
 }
 .text * {
     margin: 0;
@@ -50,4 +55,59 @@ body {
 h4, h5 {
     font-size: 1em;
     font-weight: normal;
+}
+.event-blown-up-container {
+    width: 100vw;
+    height: 100svh;
+    z-index: 1001;
+    background: #00000077;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.event-blown-up {
+    width: calc(100vw - 80px);
+    height: calc(100svh - 80px);
+    background: var(--light-surface-container-highest);
+    position: relative;
+    top: 40px;
+    left: 40px;
+    z-index: 1001;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--light-outline);
+}
+.event-blown-up * {
+    overflow: hidden;
+}
+.event-blown-up>.event-details {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.event-blown-up>.seating-buy-tickets {
+    display: grid;
+    grid-template-rows: 1fr 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.event-blown-up-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: url('https://placehold.co/400x400');
+    background-size: cover;
+}
+.event-blown-up>* {
+    overflow-y: scroll;
+}
+.event-blown-up>.seating-buy-tickets>.button-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+}
+.event-blown-up>.event-details>p {
+    font-size: 1em;
+}
+
+@media (max-width: 1000px) {
+    
 }
