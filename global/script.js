@@ -15,12 +15,18 @@ const images = [
 const questions = [
     [`Where is the arena located?`, `The Bluehaven Community Center Arena is located in St. Petersburg, Florida. You can see directions <a href="/info/directions">here</a>.`],
     [`When was the arena built?`, `The Bluehaven Community Center Arena was built in November 2024.`],
-    [`Who?`, `Me`],
-    [`Question 4`, `Answer 4`],
-    [`Question 5`, `Answer 5`],
-    [`Question 6`, `Answer 6`],
-    [`Question 7`, `Answer 7`],
-    [`Question 8`, `Answer 8`],
+    [`What are the operating hours of the Arena?`, `The Arena is open Monday to Friday, 8 AM to 8 PM, and weekends from 10 AM to 6 PM. Closed on public holidays.`],
+    [`Are food and drinks allowed inside the Arena?`, `Yes, food and drinks are allowed in designated areas, but no outside beverages or large meals.`],
+    [`What types of events are hosted at the School Arena Center?`, `We host basketball games, school assemblies, talent shows, concerts, and community fundraisers.`],
+    [`Do you offer tours of the Arena for prospective students or families?`, `Yes, tours are available by appointment every Wednesday at 3 PM. Call ahead to schedule.`],
+    [`Can students reserve the arena for club or team practice?`, `Yes, students can reserve the Arena for practice by filling out a request form. There is a small fee for non-school events.`],
+    [`Are there Wi-Fi or charging stations available in the Arena?`, `Free Wi-Fi is available throughout the Arena, and charging stations are located near the seating areas.`],
+    [`What is the seating capacity of the Arena?`, `The Arena can seat up to 1,500 people for large events and 500 for smaller gatherings.`],
+    [`Are there volunteer opportunities at the Arena?`, `Yes, volunteers are needed for event assistance, ticket sales, and crowd control. Call ahead to schedule.`],
+    [`Does the Arena host any annual or special events?`, `Yes, the Arena hosts an annual sports tournament and a back-to-school fair each fall.`],
+    [`Are there any fitness classes or programs held at the Arena?`, `We offer basketball training sessions and occasional yoga classes on weekends.`],
+    [`What should I do if I lose something at the Arena?`, `Contact the Arena front desk or email the lost and found department. Items are kept for two weeks.`],
+    [`Is there a dress code or special requirements for events?`, `For sports events, athletes must wear official uniforms. Concert-goers are encouraged to dress casually.`],
 ];
 const eventList = [ // title, description, price, start DD MMM. YYYY, end DD MMM. YYYY, H:MM A/PM, IMG
     // set end to -1 to signify single day event
