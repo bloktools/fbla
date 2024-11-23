@@ -59,7 +59,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 100px;
+    padding-top: 100px;
     background-color: #e5e5e5;
   }
   
@@ -79,4 +79,5 @@ body {
     margin-top: 20px;
     border: 2px solid #333;
   }
+  
   

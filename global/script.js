@@ -35,11 +35,11 @@ const eventList = [ // title, description, price, start DD MMM. YYYY, end DD MMM
 
 //riley: make like 10 events
 
-    ["Event 1", "This is the description for event 1.", 10, "24 Nov. 2024", -1, "6:30 PM", -1],
-    ["Event 2", "This is the description for event 2.", 15.99, "25 Nov. 2024", -1, -1, -1],
-    ["Event 3", "This is the description for event 3.", 120, "27 Nov. 2024", "1 Dec. 2024", -1, -1],
-    ["Event 4", "This is the description for event 4.", 30, "3 Dec. 2024", -1, "11:00 AM", -1],
-    ["Rolling Loud", "Celebrate 10 years of Rolling Loud at the Bluehaven Community Center in Tampa, FL.", 300, "13 Dec. 2024", "15 Dec. 2024", -1, "https://media.npr.org/assets/img/2021/11/16/gettyimages-1235223332_sq-e88ad790d447bd7dfcb0c1571047db26d39a8ee0.jpg?s=1100&c=85&f=jpeg"],
+    ["Winter Sports Season Kickoff", "Celebrate the start of winter sports with games, music, and team introductions.", 10, "November 29, 2024", -1, "5:30 PM", -1],
+    ["BlueHaven Holiday Festival", "Enjoy a festive evening with lights, music, and holiday crafts.", 15, "December 10, 2024", -1, "6:00 PM", -1],
+    ["Rolling Loud", "Celebrate 10 years of Rolling Loud at the Bluehaven Community Center in Tampa, FL.", 300, "Becember 13, 2024", "15 Dec. 2024", -1, "https://media.npr.org/assets/img/2021/11/16/gettyimages-1235223332_sq-e88ad790d447bd7dfcb0c1571047db26d39a8ee0.jpg?s=1100&c=85&f=jpeg"],
+    ["New Year’s Celebration Game", "Kick off the year with an exciting basketball game and halftime show.", 12, "January 5, 2025", -1, "7:00 PM", -1, -1],
+    ["Valentine’s Movie Night", "Watch a classic romance movie under the arena lights with snacks.", 8, "February 14, 2025", -1, "8:00 PM", -1],
 ]
 
 // ['name of page', 'link', ['commonly', 'associated', 'keywords'], extra (-1 if none)]
