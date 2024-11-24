@@ -24,9 +24,21 @@ $(()=>{
 
 $('body').on('click', '.faq-item', function () {
     if ($(this).hasClass('active')) {
-        $('.active').removeClass('active');
+        $(this).removeClass('active');
     } else {
-        $('.active').removeClass('active');
         $(this).addClass('active');
+    }
+})
+
+$('#expand-collapse-questions').click(function() {
+    if ($(this).text() === "Expand all") {
+        $(this).text("Collapse all");
+        $(this).css('background', 'var(--light-teritary)');
+        $('.faq-item').removeClass('active');
+        $('.faq-item').addClass('active');
+    } else {
+        $(this).text("Expand all");
+        $(this).css('background', 'var(--light-primary)');
+        $('.faq-item').removeClass('active');
     }
 })

@@ -1,7 +1,7 @@
 .front-page {
     width: 100vw;
     height: 100svh;
-    background: var(--light-background);
+    background: var(--light-primary);
     display: grid;
     align-items: center;
     box-sizing: border-box;

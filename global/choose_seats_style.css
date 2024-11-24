@@ -1,5 +1,7 @@
 * {
     font-family: host_grotesk, Arial, sans-serif;
+    user-select: none;
+    transition: 200ms;
 }
 body {
     margin: 0;
@@ -12,7 +14,7 @@ body {
     aspect-ratio: 2/1;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 60px;
     box-sizing: border-box;
     row-gap: 20px;
 }
@@ -24,6 +26,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+.bottom-seats {
+    background: var(--light-teritary);
+    color: var(--light-on-teritary);
+}
 .container-top-bottom>*:hover {
     filter: brightness(1.1);
 }
@@ -34,12 +40,66 @@ body {
 .container-top-section {
     display: none;
 }
-.container-top-section {
+.container-top-section, .container-bottom-section {
     width: 100vw;
     aspect-ratio: 2/1;
     position: absolute;
-    background: red;
     display: grid;
+    top: 60px;
+    gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.container-top-section>*, .container-bottom-section>* {
+    background: var(--light-primary);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-on-primary);
+}
+.container-top-section>*:hover, .container-bottom-section>*:hover {
+    filter: brightness(1.1);
+}
+.container-top-section>*:active, .container-bottom-section>*:active {
+    filter: brightness(1.3);
+}
+.top-top-left, .bottom-top-left {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%,0 100%, 0 50%);
+    padding-left: 10px;
+}
+.top-top-right, .bottom-top-right {
+    clip-path: polygon(0 0, 50% 0, 100% 50%, 100% 100%, 0 100%);
+    padding-right: 10px;
+}
+.top-bottom-left, .bottom-bottom-left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 50%);
+    padding-left: 10px;
+}
+.top-bottom-right, .bottom-bottom-right {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%);
+    padding-right: 10px;
+}
+.empty {
+    background: none !important;
+}
+.back {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+    background: var(--light-surface);
+    color: var(--light-on-surface);
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.container-bottom-section>* {
+    background: var(--light-teritary);
+    color: var(--light-on-teritary);
 }
