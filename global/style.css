@@ -2,6 +2,57 @@
 
 :root { /* VARIABLE DECLARATIONS */
 /*
+            USE THESE VARIABLES
+*/
+
+    --primary: #0b6780;
+    --surface-tint: #0b6780;
+    --on-primary: #ffffff;
+    --primary-container: #b9eaff;
+    --on-primary-container: #001f29;
+    --secondary: #7e570f;
+    --on-secondary: #ffffff;
+    --secondary-container: #ffddb1;
+    --on-secondary-container: #291800;
+    --teritary: #5b5b7e;
+    --on-teritary: #ffffff;
+    --teritary-container: #e1dfff;
+    --on-teritary-container: #181837;
+    --error: #ba1a1a;
+    --on-error: #ffffff;
+    --error-container: #ffdad6;
+    --on-error-container: #410002;
+    --background: #f5fafd;
+    --on-background: #171c1f;
+    --surface: #f5fafd;
+    --on-surface: #171c1f;
+    --surface-variant: #dce4e8;
+    --on-surface-variant: #40484c;
+    --outline: #70787c;
+    --outline-variant: #c0c8cc;
+    --shadow: #000000;
+    --scrim: #000000;
+    --inverse-surface: #2c3134;
+    --inverse-on-surface: #edf1f4;
+    --inverse-primary: #89d0ed;
+    --primary-fixed: #b9eaff;
+    --on-primary-fixed: #001f29;
+    --primary-fixed-dim: #89d0ed;
+    --secondary-fixed: #ffddb1;
+    --on-secondary-fixed: #291800;
+    --secondary-fixed-dim: #f3bd6e;
+    --teritary-fixed: #e1dfff;
+    --on-teritary-fixed: #181837;
+    --teritary-fixed-dim: #c4c3eb;
+    --on-teritary-fixed-variant: #434465 ;
+    --surface-dim: #d6dbde;
+    --surface-bright: #f5fafd;
+    --surface-container-lowest: #ffffff;
+    --surface-container: #eaeef2;
+    --surface-container-high: #e4e9ec;
+    --surface-container-highest: #dee3e6; 
+
+/*
             LIGHT MODE COLORS
 */
     --light-primary: #0b6780;
@@ -152,7 +203,7 @@
 /*
             DARK HIGH CONTRAST COLORS
 */
-    --dark-high-contrast-primary: ##f6fbff;
+    --dark-high-contrast-primary: #f6fbff;
     --dark-high-contrast-surface-tint: #89d0ed;
     --dark-high-contrast-on-primary: #000000;
     --dark-high-contrast-primary-container: #8dd5f1;
@@ -222,7 +273,7 @@ button, .nav-search {
 }
 /* shadowed elements */
 input:focus {
-    box-shadow: -.2em .2em .2em -.2em var(--light-shadow);
+    box-shadow: -.2em .2em .2em -.2em var(--shadow);
 }
 
 /* navbar styling */
@@ -235,7 +286,7 @@ nav {
     position: fixed;
     align-items: center;
     justify-content: left;
-    background: var(--light-on-background);
+    background: var(--on-background);
     padding: 0 50px;
     z-index: 1000;
     grid-auto-flow: left;
@@ -252,14 +303,14 @@ nav ul {
     position: relative;
 }
 nav ul a, nav ul li {
-    color: var(--light-on-primary);
+    color: var(--on-primary);
     margin: 0 20px;
     position: relative;
 }
 nav ul a:after { /* pseudo classes to make underline on link hover in navbar */
     content: '';
     position: absolute;
-    background: var(--light-on-primary);
+    background: var(--on-primary);
     width: calc(100% - 40px);
     height: 2px;
     left: 20px;
@@ -273,9 +324,9 @@ nav ul a:hover:after {
 }
 
 button {
-    background: var(--light-primary);
-    border: 1px solid var(--light-on-primary);
-    color: var(--light-on-primary);
+    background: var(--primary);
+    border: 1px solid var(--on-primary);
+    color: var(--on-primary);
     padding: 6px 14px;
     border-radius: 100em;
     font-size: 1em;
@@ -297,23 +348,23 @@ button.large-button {
     height: 100svh;
 }
 .surface-lowest {
-    background: var(--light-surface-container-lowest);
-    color: var(--light-on-surface);
+    background: var(--surface-container-lowest);
+    color: var(--on-surface);
     padding: 2em
 }
 .surface {
-    background: var(--light-surface-container);
-    color: var(--light-on-surface);
+    background: var(--surface-container);
+    color: var(--on-surface);
     padding: 2em
 }
 .surface-high {
-    background: var(--light-surface-container-high);
-    color: var(--light-on-surface);
+    background: var(--surface-container-high);
+    color: var(--on-surface);
     padding: 2em
 }
 .surface-highest {
-    background: var(--light-surface-container-highest);
-    color: var(--light-on-surface);
+    background: var(--surface-container-highest);
+    color: var(--on-surface);
     padding: 2em
 }
 img.regular {
@@ -341,11 +392,11 @@ p {
 }
 
 .nav-search::placeholder {
-    color: var(--light-on-surface-variant);
+    color: var(--on-surface-variant);
 }
 
 .nav-search {
-    background: var(--light-on-background);
+    background: var(--on-background);
     border: 1px solid #00000000;
     width: 66%;
     height: 40px;
@@ -354,22 +405,22 @@ p {
     box-sizing: border-box;
     position: absolute;
     top: -20px;
-    color: var(--light-outline-variant);
+    color: var(--outline-variant);
 }
 
 .nav-search:focus {
-    border: 1px solid var(--light-outline);
-    color: var(--light-on-primary);
+    border: 1px solid var(--outline);
+    color: var(--on-primary);
 }
 
 .search-results {
     width: 33%;
     min-height: 400px;
     max-height: 600px;
-    background: var(--light-on-background);
+    background: var(--on-background);
     position: fixed;
     right: 0;
-    border-top: 1px solid var(--light-outline);
+    border-top: 1px solid var(--outline);
     top: 60px;
     display: grid;
     grid-template-columns: 1fr;
@@ -384,7 +435,7 @@ p {
 }
 
 .search-results>.result {
-    border-bottom: 1px solid var(--light-outline);
+    border-bottom: 1px solid var(--outline);
     display: block;
     width: 100%;
     min-height: 100px;
@@ -396,7 +447,7 @@ p {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: var(--light-on-primary);
+    color: var(--on-primary);
 }
 
 .search-results>.result>h2 {
@@ -406,5 +457,5 @@ p {
     font-size: 1em;
 }
 .search-results>.result:hover {
-    background: var(--light-inverse-surface);
+    background: var(--inverse-surface);
 }

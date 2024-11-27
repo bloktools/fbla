@@ -1,5 +1,5 @@
 .info-background-color {
-    background: var(--light-background);
+    background: var(--background);
 }
 .panels-container {
     width: 100%;
@@ -17,7 +17,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    background: var(--light-primary);
+    background: var(--primary);
     margin: 20px;
     transition: 200ms;
     position: relative;
@@ -26,7 +26,7 @@
     text-align: center;
 }
 .panels-container * {
-    color: var(--light-on-primary);
+    color: var(--on-primary);
     text-decoration: none;
 }
 .panels-container h3 {
@@ -47,21 +47,22 @@ body {
     margin: 50;
     font-family: 'Teko', sans-serif;
     color: #333;
-    background-color: #f4f4f9;
+    background-color: var(--surface-highest);
     line-height: 1.6;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 60px;
+    background: var(--background)
 }
 
 h1 {
     font-family: 'Teko', sans-serif;
     font-size: 80px;
     font-weight: 700;
-    color: #333;
+    color: var(--on-background);
     margin-top: 100px;
     margin-bottom: 100px;
     text-transform: uppercase;
@@ -76,7 +77,7 @@ h2 {
     margin-top: 50px;
 }
 
-p, ul {
+.cointainer p, .container ul {
     font-family: 'Host Grotesk', sans-serif;
     font-weight: 300;
     font-size: 1rem;
@@ -84,19 +85,37 @@ p, ul {
     margin: 5px 0;
 }
 
-ul {
+.container ul {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+.container a {
+    text-decoration: none !important;
+    color: var(--on-surface);
 }
 
 .contact-info {
     margin-top: 20px;
     padding: 20px;
-    background-color: #e8ecef;
-    border-radius: 8px;
+    background-color: var(--surface-variant);
+    text-decoration: none !important;
+    color: var(--on-surface);
+}
+
+.contact-info * {
+    text-decoration: none !important;
+    color: var(--on-surface);
 }
 
 .contact-info strong {
     font-weight: 600;
-    color: #222;
+}
+
+.contact-info:hover {
+    filter: brightness(0.95);
+}
+
+.contact-info:active {
+    filter: brightness(0.85);
 }

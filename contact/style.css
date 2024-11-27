@@ -1,5 +1,5 @@
 body {
-    background: var(--light-background);
+    background: var(--background);
 }
 
 /* Importing Fonts */
@@ -10,7 +10,7 @@ body {
   font-family: host_grotesk, Arial, sans-serif; /* Replace with 'Host Grotesk' local font */
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: var(--surface);
 }
 
 * {
@@ -42,8 +42,8 @@ h2 {
   margin: 50px auto;
   padding: 20px;
   max-width: 1200px;
-  background-color: var(--light-surface-container-lowest);
-  border: 1px solid var(--light-outline);
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--outline);
 }
 
 /* Contact Details */
@@ -55,11 +55,11 @@ h2 {
 .contact-info p {
   margin: 1em 0;
   font-size: 1.2em;
-  color: var(--light-on-surface);
+  color: var(--on-surface);
 }
 
 .contact-info a {
-  color: var(--light-primary);
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ h2 {
     margin-top: 20px;
     font-size: 0.6em; /* Bigger font */
     font-family: host_grotesk;
-    color: var(--light-on-surface-variant); /* Optional: Change text color */
+    color: var(--on-surface-variant); /* Optional: Change text color */
   }
 
   .description>p {
@@ -83,7 +83,7 @@ h2 {
 .contact-form {
   flex: 1;
   padding: 20px;
-  background-color: var(--light-surface-container);
+  background-color: var(--surface-container);
 }
 
 .contact-form form {
@@ -95,16 +95,16 @@ h2 {
 .contact-form textarea {
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid var(--light-outline);
+  border: 1px solid var(--outline);
   font-size: 1em;
   font-family: host_grotesk, Arial, Helvetica, sans-serif;
   width: calc(100% - 20px);
-  color: var(--light-on-surface);
+  color: var(--on-surface);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  background: var(--light-surface);
+  background: var(--surface);
   box-shadow: none;
 }
 
@@ -120,5 +120,5 @@ h2 {
 
 .contact-container {
     width: 100vw;
-    color: var(--light-on-background);
+    color: var(--on-background);
 }

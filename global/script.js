@@ -21,7 +21,7 @@ const questions = [
     [`Do you offer tours of the Arena for prospective students or families?`, `Yes, tours are available by appointment every Wednesday at 3 PM. Call ahead to schedule.`],
     [`Can students reserve the arena for club or team practice?`, `Yes, students can reserve the Arena for practice by filling out a request form. There is a small fee for non-school events.`],
     [`Are there Wi-Fi or charging stations available in the Arena?`, `Free Wi-Fi is available throughout the Arena, and charging stations are located near the seating areas.`],
-    [`What is the seating capacity of the Arena?`, `The Arena can seat up to 1,500 people for large events and 500 for smaller gatherings.`],
+    [`What is the seating capacity of the Arena?`, `The Arena can seat up to 3,500 people for large events and 500 for smaller gatherings.`],
     [`Are there volunteer opportunities at the Arena?`, `Yes, volunteers are needed for event assistance, ticket sales, and crowd control. Call ahead to schedule.`],
     [`Does the Arena host any annual or special events?`, `Yes, the Arena hosts an annual sports tournament and a back-to-school fair each fall.`],
     [`Are there any fitness classes or programs held at the Arena?`, `We offer basketball training sessions and occasional yoga classes on weekends.`],
@@ -214,7 +214,7 @@ function querySearch(q) {
 $(function () {
     injectNav();
     $('head').prepend(`<link rel="stylesheet" href="/global/normalize.css">`)
-    $('body').prepend(`<script src="/global/events.js/" type="module">`)
+    $('body').prepend(`<script src="/global/dark_mode_handler.js/">`)
     $('img[src=""]').each(function () {
         generatePlaceholder($(this));
     })
@@ -224,7 +224,6 @@ $(function () {
     })
 
 
-    $('body').css('opacity', 1);
 
 //////////////////////////////////////////////////////////////////////
 //                                                                  //
@@ -262,6 +261,10 @@ $(function () {
     $('.nav-search').on('blur', () => {
         setTimeout(()=>{$('.search-results').removeClass('active');},200)
     })
+
+
+
+    $('body').css('opacity', 1);
 
 })
 

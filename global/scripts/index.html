@@ -16,11 +16,17 @@
         <input type="file" accept=".png,.jpg,.PNG,.JPG,.jpeg,.JPEG" id="blueizer-input"><br>
         <canvas id="blueizer-output" width="1920" height="1080"></canvas>
         <div class="hidden-image-blueizer" style="display: none"></div>
+        <br><br>
+        <button id="light-mode" onclick="setLightMode()">Light Mode</button>
+        <button id="dark-mode" onclick="setDarkMode()">Dark Mode</button>
+        <button id="light-mode-high-contrast" onclick="setLightModeHighContrast()">Light Mode (High Contrast)</button>
+        <button id="dark-mode-high-contrast" onclick="setDarkModeHighContrast()">Dark Mode (High Contrast)</button>
     </div>
     
 
     <script src="/global/jquery.min.js"></script>
     <script src="/global/script.js"></script>
+    <script src="/global/dark_mode_handler.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 .faq-item {
     width: calc(100% - 80px);
     margin: 40px;
-    background: var(--light-surface-variant);
-    color: var(--light-on-surface-variant);
+    background: var(--surface-variant);
+    color: var(--on-surface-variant);
     box-sizing: border-box;
     padding: 1em 2em;
     cursor: pointer;
@@ -10,7 +10,7 @@
     user-select: none;
 }
 .faq-item:nth-child(odd) {
-    background: var(--light-surface-container-highest);
+    background: var(--surface-container-highest);
 }
 .expand-me {
     display: none;
