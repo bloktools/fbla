@@ -4,7 +4,7 @@ h2 {
 }
 
 body {
-    background: var(--light-background);
+    background: var(--background);
 }
 .event-list {
     position: absolute;
@@ -26,7 +26,7 @@ body {
     margin-top: 40px;
     grid-template-columns: 300px 1fr;
     gap: 20px;
-    background: var(--light-inverse-on-surface);
+    background: var(--inverse-on-surface);
 }
 .event-list li .event-image {
     position: relative;
@@ -38,7 +38,7 @@ body {
     grid-template-rows: 1fr 50px;
     grid-template-columns: 1fr 150px;
     gap: 10px;
-    color: var(--light-on-surface);
+    color: var(--on-surface);
 }
 .text * {
     margin: 0;
@@ -50,7 +50,7 @@ body {
 }
 .text>h3 {
     justify-content: right;
-    color: var(--light-teritary);
+    color: var(--teritary);
 }
 
 .event-blown-up-container h3, .event-blown-up-container h4 {
@@ -78,14 +78,14 @@ h4, h5 {
 .event-blown-up {
     width: calc(100vw - 80px);
     height: calc(100svh - 80px);
-    background: var(--light-surface-container-highest);
+    background: var(--surface-container-highest);
     position: relative;
     top: 40px;
     left: 40px;
     z-index: 1001;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid var(--light-outline);
+    border: 1px solid var(--outline);
 }
 .event-blown-up * {
     overflow: hidden;

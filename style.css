@@ -1,7 +1,7 @@
 .front-page {
     width: 100vw;
     height: 100svh;
-    background: var(--light-primary);
+    background: var(--primary);
     display: grid;
     align-items: center;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 .front-page h1 {
     font-size: 8em;
     font-family: teko;
-    color: var(--light-on-primary);
+    color: var(--on-primary);
     margin: 0;
     padding: 0;
     line-height: 0.9em;
