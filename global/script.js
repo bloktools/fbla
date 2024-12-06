@@ -131,12 +131,23 @@ function injectNav() { // function to add the navbar to a page. puts all navbar 
     $('body>nav>ul').append('<a href=/info/><li>INFO</li></a>')
     $('body>nav>ul').append('<a href=/contact/><li>CONTACT US</li></a>')
     $('body>nav').append(`</ul>
-        <ul>
+        <ul class='search-settings-nav-container'>
             <input class=nav-search placeholder="Search"></input>
+            <button onclick="setDarkMode()"><i class=material-symbols-sharp>settings</i></button>
         </ul>
         
         </nav>`);
     $('body').prepend(`<div class=search-results></div>`);
+    $('head').append(`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&text=helpwarningmapevent_seat" />`)
+    $('head').append(`<style>
+        .material-symbols-sharp {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        </style>`)
     console.log('Navigation bar injected!');
 }
 
@@ -214,7 +225,7 @@ function querySearch(q) {
 $(function () {
     injectNav();
     $('head').prepend(`<link rel="stylesheet" href="/global/normalize.css">`)
-    $('body').prepend(`<script src="/global/dark_mode_handler.js/">`)
+    $('body').prepend(`<script src="/global/dark_mode_handler.js">`)
     $('img[src=""]').each(function () {
         generatePlaceholder($(this));
     })
@@ -242,7 +253,8 @@ $(function () {
         $('.search-results').html('');
 
         order.forEach(function (e) {
-            if (e.score > ($('.nav-search').val().length^2/order[0].score)+$('.nav-search').val().length && order.indexOf(e)<5){
+            console.log(`============\nTerm: ${e.name} | Score: ${e.score}\n | Input Length ${$('.nav-search').val().length}==================`);
+            if (e.score > (($('.nav-search').val().length)^4) && order.indexOf(e)<5){
                 const matchingItem = searches.find(item => item.name === e.name);
                 console.log(matchingItem);
             
