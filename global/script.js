@@ -276,25 +276,7 @@ $(function () {
     $('[data-background-image]').each(function () {
         insertImage($(this));
     })
-    if (!localStorage.getItem('colorMode')) {
-        localStorage.setItem('colorMode', 'light')
-    } else {
-        const mode = localStorage.getItem('colorMode');
-        const ms = $('#select-color-mode');
-        if (mode==='light') {setLightMode()
-            ms.val('light');
-        }
-        else if (mode==='dark') {setDarkMode()
-            ms.val('dark');
-        }
-        else if (mode==='light-high-contrast') {setLightModeHighContrast()
-            ms.val('light-high-contrast');
-        }
-        else if (mode==='dark-high-contrast') {setDarkModeHighContrast()
-            ms.val('dark-high-contrast');
-        }
-        else setLightMode();//light mode fallback
-    }
+    
 
 
 

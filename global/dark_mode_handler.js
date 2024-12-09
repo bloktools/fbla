@@ -203,3 +203,30 @@ function setDarkModeHighContrast() {
     r.css('--surface-container-high', $(':root').css('--dark-high-contrast-surface-container-high'));
     r.css('--surface-container-highest', $(':root').css('--dark-high-contrast-surface-container-highest'));
 }
+
+$(() => {
+    
+    if (!localStorage.getItem('colorMode')) {
+        localStorage.setItem('colorMode', 'light')
+    } else {
+        const mode = localStorage.getItem('colorMode');
+        const ms = $('#select-color-mode');
+        if (mode==='light') {setLightMode()
+            ms.val('light');
+        }
+        else if (mode==='dark') {setDarkMode()
+            ms.val('dark');
+        }
+        else if (mode==='light-high-contrast') {setLightModeHighContrast()
+            ms.val('light-high-contrast');
+        }
+        else if (mode==='dark-high-contrast') {setDarkModeHighContrast()
+            ms.val('dark-high-contrast');
+        }
+        else setLightMode();//light mode fallback
+    }
+
+    
+    
+})
+
