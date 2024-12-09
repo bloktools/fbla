@@ -10,7 +10,7 @@
 .front-page h1 {
     font-size: 8em;
     font-family: teko;
-    color: var(--on-primary);
+    color: var(--fixed-on-primary);
     margin: 0;
     padding: 0;
     line-height: 0.9em;

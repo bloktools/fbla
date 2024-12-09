@@ -79,6 +79,7 @@ h4, h5 {
     width: calc(100vw - 80px);
     height: calc(100svh - 80px);
     background: var(--surface-container-highest);
+    color: var(--on-surface);
     position: relative;
     top: 40px;
     left: 40px;

@@ -22,7 +22,7 @@ body {
 h1, h2 {
   font-family: teko, sans-serif;
   margin: 0;
-  color: #333;
+  color: var(--on-surface);
 }
 
 h1 {
@@ -93,6 +93,7 @@ h2 {
 
 .contact-form input,
 .contact-form textarea {
+  background: var(--surface);
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid var(--outline);
@@ -104,7 +105,7 @@ h2 {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  background: var(--surface);
+  background: var(--surface-highest);
   box-shadow: none;
 }
 

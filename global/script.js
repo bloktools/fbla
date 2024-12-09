@@ -133,7 +133,7 @@ function injectNav() { // function to add the navbar to a page. puts all navbar 
     $('body>nav').append(`</ul>
         <ul class='search-settings-nav-container'>
             <input class=nav-search placeholder="Search"></input>
-            <button onclick="setDarkMode()"><i class=material-symbols-sharp>settings</i></button>
+            <button id='activate-settings'><i class=material-symbols-sharp>settings</i></button>
         </ul>
         
         </nav>`);
@@ -213,6 +213,48 @@ function querySearch(q) {
     return termsScored;
 }
 
+function settingsHandler(opt, elem) {
+    if (opt === 'inject') {
+        $('body').prepend(`
+        <div class=settings-container>
+            <div class=settings>
+                <h1>Settings</h1>
+                <label for='select-color-mode'>Color Mode:</label>
+                <select name='select-color-mode' id='select-color-mode'>
+                    <option value='light'>Light Mode</option>
+                    <option value='dark'>Dark Mode</option>
+                    <option value='light-high-contrast'>Light Mode (High Contrast)</option>
+                    <option value='dark-high-contrast'>Dark Mode (High Contrast)</option>
+                </select>
+
+                <button class=close-settings>Close</button>
+            </div>
+        </div>    
+        `)
+    $('.settings-container').hide();
+    } else if (opt === 'colorMode') {
+        const mode = elem.val();
+        if (mode==='light') {setLightMode()
+            localStorage.setItem('colorMode', 'light')
+        }
+        else if (mode==='dark') {setDarkMode()
+            localStorage.setItem('colorMode', 'dark')
+        }
+        else if (mode==='light-high-contrast') {setLightModeHighContrast()
+            localStorage.setItem('colorMode', 'light-high-contrast')
+        }
+        else if (mode==='dark-high-contrast') {setDarkModeHighContrast()
+            localStorage.setItem('colorMode', 'dark-high-contrast')
+        }
+        else {console.error('could not change color mode')};
+    } else {
+        console.error('var opt in settingsHandler was not specified correctly!');
+        return;
+    }
+}
+
+
+
 //////////////////////////////////////////////////////////////////////
 //                                                                  //
 //                           ON PAGE LOAD                           //
@@ -224,8 +266,9 @@ function querySearch(q) {
 
 $(function () {
     injectNav();
-    $('head').prepend(`<link rel="stylesheet" href="/global/normalize.css">`)
-    $('body').prepend(`<script src="/global/dark_mode_handler.js">`)
+    settingsHandler('inject');
+    $('head').prepend(`<link rel="stylesheet" href="/global/normalize.css">`);
+    $('body').prepend(`<script src="/global/dark_mode_handler.js">`);
     $('img[src=""]').each(function () {
         generatePlaceholder($(this));
     })
@@ -233,6 +276,16 @@ $(function () {
     $('[data-background-image]').each(function () {
         insertImage($(this));
     })
+    if (!localStorage.getItem('colorMode')) {
+        localStorage.setItem('colorMode', 'light')
+    } else {
+        const mode = localStorage.getItem('colorMode');
+        if (mode==='light') {setLightMode()}
+        else if (mode==='dark') {setDarkMode()}
+        else if (mode==='light-high-contrast') {setLightModeHighContrast()}
+        else if (mode==='dark-high-contrast') {setDarkModeHighContrast()}
+        else (setLightMode());//light mode fallback
+    }
 
 
 
@@ -272,6 +325,17 @@ $(function () {
     })
     $('.nav-search').on('blur', () => {
         setTimeout(()=>{$('.search-results').removeClass('active');},200)
+    })
+
+    $('#activate-settings').on('click', function () {
+        $('.settings-container').toggle();
+    })
+    $('.close-settings').on('click', function () {
+        $('.settings-container').hide();
+    })
+    
+    $('#select-color-mode').on('input', function () {
+        settingsHandler('colorMode', $(this));
     })
 
 

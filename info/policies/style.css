@@ -46,7 +46,7 @@
 body {
     margin: 50;
     font-family: 'Teko', sans-serif;
-    color: #333;
+    color: var(--on-surface);
     background-color: var(--surface-highest);
     line-height: 1.6;
 }
@@ -72,16 +72,17 @@ h2 {
     font-family: 'Teko', sans-serif;
     font-weight: 600;
     font-size: 50px;
-    color: #222;
+    color: var(--on-background);
     margin-bottom: 10px;
     margin-top: 50px;
+    filter: contrast(0.8);
 }
 
 .cointainer p, .container ul {
     font-family: 'Host Grotesk', sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    color: #555;
+    color: var(--on-background);
     margin: 5px 0;
 }
 
