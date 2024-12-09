@@ -1,6 +1,7 @@
 $(()=>{
     $('body>*').hide();
     $('.container-top-bottom').show();
+    $('.seat-information').show();
 })
 
 $('.top-seats').click(()=>{

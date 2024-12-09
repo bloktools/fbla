@@ -44,18 +44,16 @@
 }
 
 body {
-    margin: 50;
     font-family: 'Teko', sans-serif;
     color: var(--on-surface);
-    background-color: var(--surface-highest);
-    line-height: 1.6;
+    background-color: var(--surface-container-lowest);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 60px;
-    background: var(--background)
+    background: var(--surface-container-high);
 }
 
 h1 {
@@ -119,4 +117,9 @@ h2 {
 
 .contact-info:active {
     filter: brightness(0.85);
+}
+
+.settings h1 {
+    margin: 0;
+    padding: 0;
 }
