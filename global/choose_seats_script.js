@@ -28,10 +28,13 @@ function showSeatThingy(t, d, p, img) {
     $('.seat-information img').attr('src', img);
     $('body>*').hide();
     $('.seat-information').show();
+    $('.back').show();
 }
 
-$('.container-top-section>*').on('click', function () {
+$('.container-top-section>*, .container-bottom-section>*').on('click', function () {
     const h1 = $(this).text();
-    
-    showSeatThingy(h1, 'test', 'test', 'https://placehold.co/10x10')
+    const loadedEvent = JSON.parse(localStorage.getItem('loadedEvent'));
+
+    showSeatThingy(h1, loadedEvent.title, loadedEvent.price, 'https://placehold.co/10x10')
+    console.log(localStorage.getItem('loadedEvent'))
 })

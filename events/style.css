@@ -122,3 +122,8 @@ h4, h5 {
 @media (max-width: 1000px) {
     
 }
+
+iframe {
+    width: 100%;
+    aspect-ratio: 3/2;
+}

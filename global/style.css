@@ -376,9 +376,9 @@ nav ul a:hover:after {
 }
 
 button {
-    background: var(--fixed-primary);
-    border: 1px solid var(--fixed-on-primary);
-    color: var(--fixed-on-primary);
+    background: var(--primary);
+    border: 1px solid var(--on-primary);
+    color: var(--on-primary);
     padding: 6px 14px;
     border-radius: 100em;
     font-size: 1em;
