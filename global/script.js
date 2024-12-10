@@ -37,7 +37,6 @@ const eventList = [ // title, description, price, start DD MMM. YYYY, end DD MMM
 
     ["Winter Sports Season Kickoff", "Celebrate the start of winter sports with games, music, and team introductions.", 10, "November 29, 2024", -1, "5:30 PM", -1],
     ["BlueHaven Holiday Festival", "Enjoy a festive evening with lights, music, and holiday crafts.", 15, "December 10, 2024", -1, "6:00 PM", -1],
-    ["Rolling Loud", "Celebrate 10 years of Rolling Loud at the Bluehaven Community Center in Tampa, FL.", 300, "Becember 13, 2024", "15 Dec. 2024", -1, "https://media.npr.org/assets/img/2021/11/16/gettyimages-1235223332_sq-e88ad790d447bd7dfcb0c1571047db26d39a8ee0.jpg?s=1100&c=85&f=jpeg"],
     ["New Year’s Celebration Game", "Kick off the year with an exciting basketball game and halftime show.", 12, "January 5, 2025", -1, "7:00 PM", -1, -1],
     ["Valentine’s Movie Night", "Watch a classic romance movie under the arena lights with snacks.", 8, "February 14, 2025", -1, "8:00 PM", -1],
 ]
