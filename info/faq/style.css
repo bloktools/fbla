@@ -54,12 +54,20 @@ body {
     padding: 20px;
 }
 
-body>h1 {
+body h1 {
     font-family: 'Teko', sans-serif;
-    font-size: 80px;
+    font-size: 5em;
     font-weight: 700;
     color: var(--on-background);
     padding-top: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
     text-align: center;
     text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+    body h1 {
+        font-size: 3em;
+    }
 }

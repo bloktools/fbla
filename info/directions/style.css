@@ -80,5 +80,17 @@ body {
     border: 2px solid var(--on-background);
     align-items: center;
   }
+  .mobile-opts {
+      display: none;
+  }
+
+  @media (max-width: 1000px) {
+    .desktop-div-iframe-container {
+        display: none;
+    }
+    .mobile-opts {
+        display: block;
+    }
+  }
   
   

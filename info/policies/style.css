@@ -58,7 +58,7 @@ body {
 
 h1 {
     font-family: 'Teko', sans-serif;
-    font-size: 80px;
+    font-size: 5em;
     font-weight: 700;
     color: var(--on-background);
     margin-top: 100px;
@@ -122,4 +122,16 @@ h2 {
 .settings h1 {
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 500px) {
+    body h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 2.4em;
+    }
+    p {
+        font-size: 1.2em;
+    }
 }

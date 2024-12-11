@@ -10,6 +10,7 @@ input {
     box-sizing: border-box;
     background: var(--surface-container);
     border: 1px solid var(--outline);
+    color: var(--on-surface);
     box-shadow: none !important;
     padding: 0 5vw;
     font-size: 1.5em;

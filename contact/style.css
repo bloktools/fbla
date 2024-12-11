@@ -37,13 +37,15 @@ h2 {
 
 /* Container layout */
 .contact-container {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   margin: 50px auto;
   padding: 20px;
   max-width: 1200px;
   background-color: var(--surface-container-lowest);
   border: 1px solid var(--outline);
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
 }
 
 /* Contact Details */
@@ -122,4 +124,17 @@ h2 {
 .contact-container {
     width: 100vw;
     color: var(--on-background);
+}
+
+@media (max-width: 1200px) {
+  .contact-container {
+    border: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+  }
 }
