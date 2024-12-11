@@ -8,8 +8,8 @@
 //////////////////////////////////////////////////////////////////////
 
 const images = [
-    ['corner_view', '/global/assets/arena_renders/corner_view.PNG'],
-    ['head_on', '/global/assets/arena_renders/head_on.PNG'],
+    ['corner_view', '/global/assets/arena_renders/corner_view.png'],
+    ['head_on', '/global/assets/arena_renders/head_on.png'],
 ]
 
 const questions = [
