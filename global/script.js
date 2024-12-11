@@ -131,7 +131,7 @@ searches = [
 function injectNav() { // function to add the navbar to a page. puts all navbar code at the start of the body. made so i can update the navbar if necessary
     $('body').prepend('<nav>');
     $('body>nav').prepend('<ul>');
-    $('body>nav>ul').append('<a href=/><li>HOME</li></a>')
+    $('body>nav>ul').append(`<button id='activate-menu'><i class=material-symbols-sharp>menu</i></button><a href=/><li>HOME</li></a>`)
     $('body>nav>ul').append('<a href=/events/><li>EVENTS</li></a>')
     $('body>nav>ul').append('<a href=/info/><li>INFO</li></a>')
     $('body>nav>ul').append('<a href=/contact/><li>CONTACT US</li></a>')
@@ -141,9 +141,22 @@ function injectNav() { // function to add the navbar to a page. puts all navbar 
             <button id='activate-settings'><i class=material-symbols-sharp>settings</i></button>
         </ul>
         
-        </nav>`);
+        </nav>
+        
+            <div class="nav-mobile-expanded">
+        <a href="/">HOME</a><br>
+        <a href="/events/">EVENTS</a><br>
+        <a href="/info/">INFO</a><br>
+        <a href="/contact/">CONTACT US</a><br>
+        <a id="activate-settings-mobile">SETTINGS</a><br>
+        <a href="/mobile_search/">SEARCH</a><br>
+    </div>
+        
+        
+        
+        `);
     $('body').prepend(`<div class=search-results></div>`);
-    $('head').append(`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&text=helpwarningmapevent_seat" />`)
+    $('head').append(`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />`)
     $('head').append(`<style>
         .material-symbols-sharp {
           font-variation-settings:
@@ -326,6 +339,9 @@ $(function () {
     $('#activate-settings').on('click', function () {
         $('.settings-container').toggle();
     })
+    $('#activate-settings-mobile').on('click', function () {
+        $('.settings-container').toggle();
+    })
     $('.close-settings').on('click', function () {
         $('.settings-container').hide();
     })
@@ -334,7 +350,14 @@ $(function () {
         settingsHandler('colorMode', $(this));
     })
 
-
+    $('#activate-menu').click(function(){
+        $('.nav-mobile-expanded').toggle();
+        if ($(this).text()=='menu') {
+            $(this).children().text('close');
+        } else {
+            $(this).children().text('menu');
+        }
+    })
 
     $('body').css('opacity', 1);
 

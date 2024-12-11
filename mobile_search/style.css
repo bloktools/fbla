@@ -1,0 +1,35 @@
+body {
+    background: var(--background);
+}
+
+input {
+    width: calc(100vw - 40px);
+    margin-left: 20px;
+    aspect-ratio: 6/1;
+    max-height: 80px;
+    box-sizing: border-box;
+    background: var(--surface-container);
+    border: 1px solid var(--outline);
+    box-shadow: none !important;
+    padding: 0 5vw;
+    font-size: 1.5em;
+}
+
+.search-results {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 159px;
+    width: calc(100vw - 40px);
+    height: calc(100svh - 160px);
+    background: var(--surface-container);
+
+}
+.search-results * {
+    color: var(--on-surface) !important;
+}
+
+.result:hover {
+    background: var(--surface-container) !important;
+    color: var(--on-surface) !important;
+}
