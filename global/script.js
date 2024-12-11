@@ -39,6 +39,12 @@ const eventList = [ // title, description, price, start DD MMM. YYYY, end DD MMM
     ["BlueHaven Holiday Festival", "Enjoy a festive evening with lights, music, and holiday crafts.", 15, "December 10, 2024", -1, "6:00 PM", -1],
     ["New Year’s Celebration Game", "Kick off the year with an exciting basketball game and halftime show.", 12, "January 5, 2025", -1, "7:00 PM", -1, -1],
     ["Valentine’s Movie Night", "Watch a classic romance movie under the arena lights with snacks.", 8, "February 14, 2025", -1, "8:00 PM", -1],
+    ["Spring Carnival", "Join us for rides, games, and food trucks to welcome spring.", 20, "March 22, 2025", -1, "3:00 PM", -1],
+    ["Annual Talent Showcase", "Watch students and staff show off their talents in this fun competition.", 10, "April 18, 2025", -1, "6:30 PM", -1],
+    ["Summer Kickoff Concert", "Celebrate the start of summer with live music and good vibes.", 18, "May 31, 2025", -1, "7:00 PM", -1],
+    ["Rivalry Night Game", "Don’t miss our biggest basketball game of the season against a rival team.", 12, "June 14, 2025", -1, "7:30 PM", -1],
+    ["BlueHaven Charity Walk", "Walk or run to support local causes and enjoy refreshments after.", 5, "July 20, 2025", -1, "8:00 AM", -1],
+    ["Back-to-School Spirit Rally", "Pump up the school spirit before the new school year with games and music.", 8, "August 15, 2025", -1, "6:00 PM", -1]
 ]
 
 // ['name of page', 'link', ['commonly', 'associated', 'keywords'], extra (-1 if none)]
